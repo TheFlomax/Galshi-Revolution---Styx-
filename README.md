@@ -2,7 +2,7 @@
 Project file repository: Galshi Revolution - Styx
 ![Image demo](https://imgur.com/a/5o5IqyB)
 
-Find the wallpaper on Steam : 
+Find the wallpaper on Steam : https://steamcommunity.com/sharedfiles/filedetails/?id=2564162532
 
 Guide d'installation / Installation Guide :
 
