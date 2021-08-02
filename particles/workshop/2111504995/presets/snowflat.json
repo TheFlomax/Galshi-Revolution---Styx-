@@ -1,0 +1,103 @@
+{
+	"children" : null,
+	"controlpoint" : 
+	[
+		{
+			"id" : 0
+		},
+		{
+			"id" : 1
+		},
+		{
+			"id" : 2
+		},
+		{
+			"id" : 3
+		},
+		{
+			"id" : 4
+		},
+		{
+			"id" : 5
+		},
+		{
+			"id" : 6
+		},
+		{
+			"id" : 7
+		}
+	],
+	"emitter" : 
+	[
+		{
+			"directions" : "1 0.03 0",
+			"distancemax" : 1200,
+			"distancemin" : 10,
+			"id" : 6,
+			"name" : "sphererandom",
+			"origin" : "0 650 0",
+			"rate" : 15
+		}
+	],
+	"initializer" : 
+	[
+		{
+			"id" : 2,
+			"max" : 23,
+			"min" : 15,
+			"name" : "lifetimerandom"
+		},
+		{
+			"id" : 3,
+			"max" : 30,
+			"min" : 2,
+			"name" : "sizerandom"
+		},
+		{
+			"id" : 4,
+			"max" : "-37 -90 0",
+			"min" : "-10 -50 0",
+			"name" : "velocityrandom"
+		},
+		{
+			"id" : 5,
+			"max" : "95 98 100",
+			"min" : "255 255 255",
+			"name" : "colorrandom"
+		}
+	],
+	"material" : "materials/workshop/2111504995/presets/snowflat.json",
+	"maxcount" : 300,
+	"operator" : 
+	[
+		{
+			"gravity" : "0 0 0",
+			"id" : 7,
+			"name" : "movement"
+		},
+		{
+			"frequencymax" : 1.0,
+			"frequencymin" : 0.80000000000000004,
+			"id" : 8,
+			"mask" : "1 0.5 0",
+			"name" : "oscillateposition",
+			"phasemax" : 1,
+			"phasemin" : 0,
+			"scalemax" : 35,
+			"scalemin" : 20
+		},
+		{
+			"fadeintime" : 0.10000000000000001,
+			"id" : 9,
+			"name" : "alphafade"
+		}
+	],
+	"renderer" : 
+	[
+		{
+			"id" : 1,
+			"name" : "sprite"
+		}
+	],
+	"starttime" : 15
+}

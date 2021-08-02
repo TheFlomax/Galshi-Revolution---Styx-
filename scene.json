@@ -1,0 +1,213 @@
+{
+	"camera" : 
+	{
+		"center" : "0.00000 0.00000 0.00000",
+		"eye" : "0.00000 0.00000 1.00000",
+		"up" : "0.00000 1.00000 0.00000"
+	},
+	"general" : 
+	{
+		"ambientcolor" : "0.30000 0.30000 0.30000",
+		"bloom" : true,
+		"bloomhdrfeather" : 0.10000000149011612,
+		"bloomhdriterations" : 8,
+		"bloomhdrscatter" : 1.6189999580383301,
+		"bloomhdrstrength" : 2.0,
+		"bloomhdrthreshold" : 1.0,
+		"bloomstrength" : 0.25999999046325684,
+		"bloomthreshold" : 0.62000000476837158,
+		"camerafade" : true,
+		"cameraparallax" : false,
+		"cameraparallaxamount" : 0.5,
+		"cameraparallaxdelay" : 0.10000000149011612,
+		"cameraparallaxmouseinfluence" : 0.5,
+		"camerapreview" : true,
+		"camerashake" : false,
+		"camerashakeamplitude" : 0.5,
+		"camerashakeroughness" : 1.0,
+		"camerashakespeed" : 3.0,
+		"clearcolor" : "0.70000 0.70000 0.70000",
+		"clearenabled" : true,
+		"farz" : 10000.0,
+		"fov" : 50.0,
+		"hdr" : true,
+		"nearz" : 0.0099999997764825821,
+		"orthogonalprojection" : 
+		{
+			"height" : 3248,
+			"width" : 5760
+		},
+		"skylightcolor" : "0.30000 0.30000 0.30000",
+		"zoom" : 1.0
+	},
+	"objects" : 
+	[
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 14,
+			"image" : "models/solid-color-image.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "solid-color-image",
+			"origin" : "2880.00000 1624.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "5760.00000 3248.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/foliagesway/effect.json",
+					"id" : 65,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"phase" : 0.5,
+								"power" : 1.0,
+								"ratio" : 0.29999999999999999,
+								"scale" : 0.050000000000000003,
+								"scrolldirection" : 0.0,
+								"speeduv" : 5.0,
+								"strength" : 0.40000000000000002
+							},
+							"id" : 66,
+							"textures" : [ null, "masks/foliagesway_mask_a8ff5417", "util/noise" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 63,
+			"image" : "models/testgals_flou (1).json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "testgals_flou (1)",
+			"origin" : "2880.00000 1624.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "5760.00000 3248.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 77,
+			"instanceoverride" : 
+			{
+				"brightness" : 1.0399999618530273,
+				"colorn" : "1.00000 1.00000 1.00000",
+				"id" : 79,
+				"rate" : 
+				{
+					"script" : "'use strict';\nexport let __workshopId = '2097947622';\n\n/**\n * Configure these to control smoothing and the frequency.\n */\nlet frequencyResolution = 16; // Must be 16, 32 or 64 per channel.\nlet sourceFrequency = 0; // Must be smaller than frequencyResolution. Lower values for bass, higher for treble.\nlet smoothingRate = 16;\nlet minimumValue = 0.1;\nlet maximumValue = 1.0;\n\n/**\n * This creates a permanent link to the audio response data.\n */\nlet audioBuffer = engine.registerAudioBuffers(frequencyResolution);\nvar smoothValue = 0;\nvar initialValue;\nconst valueDelta = maximumValue - minimumValue;\n\n/**\n */\nexport function update() {\n\tlet audioDelta = audioBuffer.average[sourceFrequency] - smoothValue;\n\t\n\tsmoothValue += audioDelta * engine.frametime * smoothingRate;\n\tsmoothValue = Math.min(1.0, smoothValue);\n\n\treturn initialValue * (smoothValue * valueDelta + minimumValue);\n}\n\n/**\n */\nexport function init(value) {\n\tinitialValue = value;\n}\n\n",
+					"value" : 1.0
+				},
+				"size" : 1.0700000524520874
+			},
+			"locktransforms" : true,
+			"name" : "Particles - Perspective",
+			"origin" : "2880.00000 1624.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/workshop/2097947622/1.json",
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : 
+			{
+				"user" : "particule",
+				"value" : true
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"config" : 
+			{
+				"passthrough" : true
+			},
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/workshop/2077624697/vhstest/effect.json",
+					"id" : 50,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"artifacts" : 1.5,
+								"chromatic" : 3.4199999999999999,
+								"distortionspeed" : 0.91000000000000003,
+								"distortionstrength" : 0.20999999999999999,
+								"distortionwidth" : 1.3200000000000001,
+								"scale" : 0.29999999999999999,
+								"strength" : 1.0
+							},
+							"id" : 51,
+							"textures" : [ null, "util/noise" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 47,
+			"image" : "models/util/composelayer.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "VHS responsive",
+			"origin" : "2880.00000 1624.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : true,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "5760.00000 3248.00000",
+			"solid" : false,
+			"visible" : 
+			{
+				"user" : "vsh",
+				"value" : true
+			}
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 28,
+			"locktransforms" : true,
+			"maxtime" : 5.0,
+			"mintime" : 1.0,
+			"muteineditor" : true,
+			"name" : "Galshi Revolution - Styx (No copyright music).mp3",
+			"origin" : "0.00000 0.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"playbackmode" : "loop",
+			"scale" : "1.00000 1.00000 1.00000",
+			"sound" : [ "sounds/Galshi Revolution - Styx (No copyright music).mp3" ],
+			"startsilent" : false,
+			"volume" : 0.5
+		}
+	],
+	"version" : 1
+}

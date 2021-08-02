@@ -1,0 +1,109 @@
+{
+	"animationmode" : "sequence",
+	"children" : null,
+	"controlpoint" : 
+	[
+		{
+			"flags" : 0,
+			"id" : 0,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 1,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 2,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 3,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 4,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 5,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 6,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 7,
+			"offset" : "0 0 0"
+		}
+	],
+	"emitter" : 
+	[
+		{
+			"directions" : "2 2 0",
+			"distancemax" : 512,
+			"distancemin" : 0,
+			"id" : 5,
+			"name" : "sphererandom",
+			"origin" : "0 0 0",
+			"rate" : 250,
+			"speedmax" : 1,
+			"speedmin" : 1
+		}
+	],
+	"flags" : 4,
+	"initializer" : 
+	[
+		{
+			"id" : 2,
+			"max" : 5,
+			"min" : 5,
+			"name" : "lifetimerandom"
+		},
+		{
+			"id" : 3,
+			"max" : 5,
+			"min" : 3,
+			"name" : "sizerandom"
+		},
+		{
+			"id" : 4,
+			"max" : "255 255 255",
+			"min" : "255 255 255",
+			"name" : "colorrandom"
+		}
+	],
+	"material" : "materials/workshop/2097947622/particle/starfield_3.json",
+	"maxcount" : 100000,
+	"operator" : 
+	[
+		{
+			"drag" : 0.20000000000000001,
+			"gravity" : "250 0 0",
+			"id" : 6,
+			"name" : "movement"
+		},
+		{
+			"fadeintime" : 0.10000000000000001,
+			"fadeouttime" : 0.90000000000000002,
+			"id" : 7,
+			"name" : "alphafade"
+		}
+	],
+	"renderer" : 
+	[
+		{
+			"id" : 1,
+			"name" : "sprite"
+		}
+	],
+	"sequencemultiplier" : 1,
+	"starttime" : 1
+}

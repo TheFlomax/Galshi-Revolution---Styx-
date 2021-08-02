@@ -1,0 +1,19 @@
+{
+	"dependencies" : 
+	[
+		"materials/workshop/2077624697/effects/vhstest.json",
+		"shaders/workshop/2077624697/effects/vhstest.frag",
+		"shaders/workshop/2077624697/effects/vhstest.vert"
+	],
+	"editable" : false,
+	"group" : "localeffects",
+	"name" : "vhstest",
+	"passes" : 
+	[
+		{
+			"material" : "materials/workshop/2077624697/effects/vhstest.json"
+		}
+	],
+	"replacementkey" : "vhstest",
+	"version" : 1
+}

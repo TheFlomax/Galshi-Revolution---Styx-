@@ -1,0 +1,43 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "",
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"particule" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Particule",
+				"type" : "bool",
+				"value" : true
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "1 0.34509803921568627 0.6078431372549019"
+			},
+			"vsh" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "VSH",
+				"type" : "bool",
+				"value" : true
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Music" ],
+	"title" : "Galshi Revolution - Styx",
+	"type" : "scene",
+	"version" : 1,
+	"visibility" : "unlisted",
+	"workshopid" : "2564162532",
+	"workshopurl" : "steam://url/CommunityFilePage/2564162532"
+}
